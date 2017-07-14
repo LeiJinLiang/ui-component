@@ -1,6 +1,27 @@
-import styles from './style/common.css'
+import React from 'react'
+import { render } from 'react-dom'
+import { Router, browserHistory } from 'react-router'
+import configureStore from './store/configStore';
+import { Provider } from 'react-redux';
 
-let elem = document.createElement('div')
-elem.textContent = 'ui-component'
-elem.className = styles.red
-document.body.appendChild(elem)
+
+const store = configureStore()
+
+const rootRoute = {
+    childRoutes : [{
+        path: '/',
+        component: require('./pages/Home/Home'),
+        childRoutes : [
+            require('./pages/demo')
+        ]
+    }]
+}
+
+render((
+ <Provider store={ store }>
+     <Router
+        history = { browserHistory }
+        routes = { rootRoute }
+     />
+ </Provider>
+),document.getElementById('root'))
