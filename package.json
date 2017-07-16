@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server",
     "build": "rm -rf dist && env NODE_ENV=production webpack --config ./webpack.production.config.js --progress --profile --colors && env NODE_ENV=production PORT=3002 node server",
-    "pro": "rm -rf dist && env NODE_ENV=production webpack --config ./webpack.production.config.js --progress --profile --colors && env NODE_ENV=production PORT=3000 forever server.js"
+    "pro": "rm -rf dist && env NODE_ENV=production webpack --config ./webpack.production.config.js --progress --profile --colors"
   },
   "keywords": [
     "react",
