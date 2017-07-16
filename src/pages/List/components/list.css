@@ -1,0 +1,20 @@
+.contanier>li{
+    width: 50%;
+    margin: 0 auto;
+}
+.contanier>li>img{
+    transition: all 1s ease-in-out;
+    animation: fade-left 2s ease 1;
+}
+.contanier>li>img:hover{
+    transform: translate(0,100px);
+}
+
+@keyframes fade-left {
+    0% {
+        transform: translate(-2000px,0);
+    }
+    100%{
+        transform: translate(0);
+    }
+}

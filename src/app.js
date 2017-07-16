@@ -12,7 +12,7 @@ const rootRoute = {
         component: require('./pages/Home/Home'),
         childRoutes : [
             require('./pages/demo'),
-
+            require('./pages/List')
         ]
     } ]
 }

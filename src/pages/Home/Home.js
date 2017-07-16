@@ -4,7 +4,7 @@ require('../../style/common.css')
 
 const nav = [
     {name : 'demo1', path: '/demo'},
-    {name : 'demo2', path: '/demo'},
+    {name : 'demo2', path: '/list'},
     {name : 'demo3', path: '/demo'}
 ]
 
