@@ -6,7 +6,7 @@
     top:0;
 }
 .contanier>ul{
-    width: 960px;
+    width: 80%;
     display: flex;
     margin: 0 auto;
     text-align: center;

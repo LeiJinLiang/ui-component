@@ -5,6 +5,7 @@
 .contanier>li>img{
     transition: all 1s ease-in-out;
     animation: fade-left 2s ease 1;
+    width: 100%;
 }
 .contanier>li>img:hover{
     transform: translate(0,100px);
