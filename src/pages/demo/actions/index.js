@@ -1,10 +1,9 @@
 const CHANGE_TEXT = 'CHANGE_TEXT'
-const BUTTON_CLCIK = 'BUTTON_CLCIK'
-
+const BUTTON_CLICK = 'BUTTON_CLICK'
 export const changeText = () => (
-    { type : CHANGE_TEXT }
+{ type : CHANGE_TEXT}
 )
 
 export const buttonClick = () => (
-    { type : BUTTON_CLCIK }
+{ type : BUTTON_CLICK}
 )

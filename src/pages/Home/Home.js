@@ -3,9 +3,12 @@ import React , { Component } from 'react'
 class Home extends Component {
     render() {
         return(
-            <div>
+            <section>
                 home
-            </div>
+                <div>
+                    {this.props.children}
+                </div>
+            </section>
         )
     }
 }
