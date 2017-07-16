@@ -5,7 +5,7 @@ require('../../style/common.css')
 const nav = [
     {name : 'demo1', path: '/demo'},
     {name : 'demo2', path: '/list'},
-    {name : 'demo3', path: '/demo'}
+    {name : 'demo3', path: '/board'}
 ]
 
 class Home extends Component {
@@ -13,7 +13,7 @@ class Home extends Component {
         return(
             <section>
                 <Nav data = {nav}/>
-                <div style={{ marginTop : '50px', padding : '0 20px 0 20px'}}>
+                <div style={{ marginTop : '60px', padding : '0 20px 0 20px'}}>
                      CONTACT :  <a href="mailto:reg_taozi@163.com">reg_taozi@163.com</a>
                     {this.props.children}
                 </div>

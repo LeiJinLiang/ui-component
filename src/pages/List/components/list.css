@@ -2,6 +2,10 @@
     width: 50%;
     margin: 0 auto;
 }
+.contanier>p{
+    text-align: center;
+    width: 100%;
+}
 .contanier>li>img{
     transition: all 1s ease-in-out;
     animation: fade-left 2s ease 1;
