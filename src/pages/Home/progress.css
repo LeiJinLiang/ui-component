@@ -1,0 +1,19 @@
+.progress{
+    height: 2px;
+    background-color: orangered;
+    position: fixed;
+    top:0;
+    animation-name: progress-bar-stripes;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 99;
+}
+@keyframes progress-bar-stripes {
+    0% {
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}

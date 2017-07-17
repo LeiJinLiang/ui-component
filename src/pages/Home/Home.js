@@ -1,5 +1,7 @@
 import React , { Component } from 'react'
 import Nav from './Nav'
+import Progress from './Progress'
+
 require('../../style/common.css')
 
 const nav = [
@@ -9,9 +11,13 @@ const nav = [
 ]
 
 class Home extends Component {
+    constructor(props) {
+        super(props)
+    }
     render() {
         return(
             <section>
+                <Progress />
                 <Nav data = {nav}/>
                 <div style={{ marginTop : '60px', padding : '0 20px 0 20px'}}>
                      CONTACT :  <a href="mailto:reg_taozi@163.com">reg_taozi@163.com</a>

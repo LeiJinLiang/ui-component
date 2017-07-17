@@ -18,7 +18,6 @@ class BoardCon extends  Component {
 
     render() {
         const {images} = this.props
-        console.log('this.props',this.props)
         return(
             <div>
                 {images.result?<Board images = {images.result}/>: 'Empty'}
@@ -29,6 +28,7 @@ class BoardCon extends  Component {
 
 
 const mapStateToProps = state => {
+    //console.log('state',state)
     return { images : state.recieveImages}
 }
 
