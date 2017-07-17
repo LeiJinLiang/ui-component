@@ -43,9 +43,23 @@
     border-bottom: none;
     padding: 0 10px 0 10px;
 }
+.content{
+    transition: all 1s ease-in-out;
+    animation: fadein 2s ease 1;
+}
 .content >li:first-child{
     border-top: none;
 }
 .content > li:last-child {
     border-bottom: 1px solid;
+}
+@keyframes fadein {
+    0% {
+        transform: translate(0,-20px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0);
+        opacity: 1;
+    }
 }
