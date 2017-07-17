@@ -45,7 +45,7 @@
 }
 .content{
     transition: all 1s ease-in-out;
-    animation: fadein 2s ease 1;
+    animation: fadein 1s ease 1;
 }
 .content >li:first-child{
     border-top: none;
