@@ -64,6 +64,10 @@ module.exports = {
                     use : 'css-loader?modules&localIdentName=[name]---[local]---[hash:base64:5]!postcss-loader'
                 })
             },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                loader: 'file-loader'
+            }
         ]
     }
 }

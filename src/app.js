@@ -13,7 +13,8 @@ const rootRoute = {
         childRoutes : [
             require('./pages/demo'),
             require('./pages/List'),
-            require('./pages/Board')
+            require('./pages/Board'),
+            require('./pages/About')
         ]
     } ]
 }

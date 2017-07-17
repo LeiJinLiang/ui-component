@@ -12,7 +12,6 @@ import * as listAction from '../actions'
 class BoardCon extends  Component {
     componentDidMount () {
         const { dispatch } = this.props
-        console.log('this.props',this.props)
         this.props.actions.fetchPostsIfNeeded('edu_banner')
     }
 
