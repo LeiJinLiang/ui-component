@@ -34,3 +34,18 @@
     font-family: Helvetica;
     font-size: 16px;
 }
+.item{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #eee;
+    border: 1px solid;
+    border-bottom: none;
+    padding: 0 10px 0 10px;
+}
+.content >li:first-child{
+    border-top: none;
+}
+.content > li:last-child {
+    border-bottom: 1px solid;
+}

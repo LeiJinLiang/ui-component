@@ -11,6 +11,11 @@ const SearchForm = ({}) => (
                 <input type="text" placeholder="Search for everything"/>
             </div>
         </header>
+        <ul className={ styles.content }>
+            <li className={ styles.item }>icons</li>
+            <li className={ styles.item }>icons</li>
+            <li className={ styles.item }>icons</li>
+        </ul>
     </div>
 )
 
