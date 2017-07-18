@@ -1,0 +1,9 @@
+{
+  "use": [
+    "autoprefixer"
+  ],
+  "input": "src/style/common.css",
+  "output": "public/main.css",
+  "local-plugins": true,
+  "watch": true
+}
