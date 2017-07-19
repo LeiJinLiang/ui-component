@@ -42,7 +42,8 @@ module.exports = {
             options: {
                 context: __dirname,
                 postcss: [
-                    require('autoprefixer')
+                    require('autoprefixer'),
+                    require('precss')
                 ]
             }
         })
