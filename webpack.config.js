@@ -2,6 +2,9 @@
 var path = require('path')
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var precss       = require('precss');
+var autoprefixer = require('autoprefixer');
+
 
 module.exports = {
     devtool : 'eval-source-map',
@@ -27,6 +30,13 @@ module.exports = {
         new webpack.NoEmitOnErrorsPlugin(),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('development')
+        }),
+        new webpack.LoaderOptionsPlugin({
+            options: {
+                postcss: function () {
+                    return [precss, autoprefixer];
+                }
+            }
         })
     ],
     module: {
@@ -40,10 +50,17 @@ module.exports = {
         }, {
             test: /\.json?$/,
             loader: 'json'
-        }, {
-            test: /\.css$/,
-            loader: 'style-loader!css-loader?modules&localIdentName=[name]---[local]---[hash:base64:5]'
-        },{
+        },
+        //{
+        //    test: /\.css$/,
+        //    loader: 'style-loader!css-loader?modules&localIdentName=[name]---[local]---[hash:base64:5]'
+        //}
+        {
+            test:   /\.css$/,
+            loader: "style-loader!css-loader?modules&localIdentName=[name]---[local]---[hash:base64:5]!postcss-loader"
+        }
+
+        ,{
             test: /\.(png|svg|jpg|gif)$/,
             loader: 'file-loader'
         }

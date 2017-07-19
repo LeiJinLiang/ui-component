@@ -4,7 +4,7 @@ var path = require('path')
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
-
+var optimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 module.exports = {
     entry : [
         path.join(__dirname, 'src/app.js')
@@ -24,6 +24,11 @@ module.exports = {
             favicon: './src/icon.png'
         }),
         new ExtractTextPlugin('[name]-[hash].min.css'),
+        new optimizeCssAssetsPlugin({
+            cssProcessorOptions: {
+                safe: true,
+            },
+        }),
         new webpack.optimize.UglifyJsPlugin({
             compressor: {
                 warnings: false,
