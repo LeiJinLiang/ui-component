@@ -28,7 +28,7 @@ class SearchForm extends Component {
         return(
             <div className = { styles.contanier }>
                 <header className={styles.head}>
-                    <span className = {styles.bg} style= {{ backgroundImage: 'url(' + Icon + ')', }}></span>
+                    <span className = {styles.bg}></span>
                     <div className={styles.form}>
                         <input type="text" value = { value } onChange = { e => this.handleChange(e)} placeholder="Search for everything"/>
                     </div>
@@ -44,3 +44,5 @@ class SearchForm extends Component {
 }
 
 export default SearchForm
+
+//style= {{ backgroundImage: 'url(' + Icon + ')', }}

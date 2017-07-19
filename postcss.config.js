@@ -1,6 +1,10 @@
 module.exports = {
     plugins: [
         require('autoprefixer'),
-        require('precss')
+        require('precss'),
+        require('postcss-assets')({
+            basePath : './src',
+            loadPaths: []
+        })
     ]
 }

@@ -43,7 +43,8 @@ module.exports = {
                 context: __dirname,
                 postcss: [
                     require('autoprefixer'),
-                    require('precss')
+                    require('precss'),
+                    require('postcss-assets')
                 ]
             }
         })

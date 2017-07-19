@@ -4,7 +4,7 @@ var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var precss       = require('precss');
 var autoprefixer = require('autoprefixer');
-
+var postassets = require('postcss-assets');
 module.exports = {
     devtool : 'eval-source-map',
     entry : [
@@ -33,7 +33,7 @@ module.exports = {
         new webpack.LoaderOptionsPlugin({
             options: {
                 postcss: function () {
-                    return [precss, autoprefixer];
+                    return [precss, autoprefixer, postassets]
                 }
             }
         })
