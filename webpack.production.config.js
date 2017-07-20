@@ -23,7 +23,10 @@ module.exports = {
             filename : 'index.html',
             favicon: './src/icon.png'
         }),
-        new ExtractTextPlugin('[name]-[hash].min.css'),
+        new ExtractTextPlugin({
+            filename : '[name]-[hash].min.css',
+            allChunks: true
+        }),
         new optimizeCssAssetsPlugin({
             cssProcessorOptions: {
                 safe: true,

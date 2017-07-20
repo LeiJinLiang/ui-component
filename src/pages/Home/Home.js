@@ -20,8 +20,8 @@ class Home extends Component {
                 <Progress />
                 <Nav data = {nav}/>
                 <div style={{ marginTop : '60px', padding : '0 20px 0 20px'}}>
-                     CONTACT :  <a href="mailto:reg_taozi@163.com">reg_taozi@163.com</a>
                     {this.props.children}
+                    CONTACT :  <a href="mailto:reg_taozi@163.com">reg_taozi@163.com</a>
                 </div>
             </section>
         )

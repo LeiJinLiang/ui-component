@@ -3,16 +3,17 @@
  */
 import React, { Component } from 'react'
 import { Link } from 'react-router'
+import CSSModules from 'react-css-modules'
 import styles from './nav.css'
 
 const Nav = ({data}) => (
-    <div className={styles.contanier}>
+    <div styleName='contanier'>
         <ul>
             {data.map((item,index)=>(
-                <li className={styles.item} key = {index}><Link to={item.path}>{item.name}</Link></li>
+                <li styleName="item" key = {index}><Link to={item.path}>{item.name}</Link></li>
             ))}
         </ul>
     </div>
 )
 
-export default Nav
+export default CSSModules(Nav, styles)

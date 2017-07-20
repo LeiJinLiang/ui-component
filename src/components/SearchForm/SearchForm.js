@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Icon from '../../images/search.png'
+import CSSModules from 'react-css-modules'
 import styles from './search.css'
 
 
@@ -26,16 +26,16 @@ class SearchForm extends Component {
     render() {
         const { value , arr } = this.state
         return(
-            <div className = { styles.contanier }>
-                <header className={styles.head}>
-                    <span className = {styles.bg}></span>
-                    <div className={styles.form}>
+            <div styleName = "contanier">
+                <header styleName="head">
+                    <span styleName = "bg"></span>
+                    <div styleName="form">
                         <input type="text" value = { value } onChange = { e => this.handleChange(e)} placeholder="Search for everything"/>
                     </div>
                 </header>
-                <ul className={ arr.length>0?styles.content:''}>
+                <ul styleName={ arr.length>0?"content":''}>
                     {arr.map((item,index)=> (
-                        <li className={ styles.item } key = {index}>{item.value}</li>
+                        <li styleName="item" key = {index}>{item.value}</li>
                     ))}
                 </ul>
             </div>
@@ -43,6 +43,6 @@ class SearchForm extends Component {
     }
 }
 
-export default SearchForm
+export default CSSModules(SearchForm,styles)
 
 //style= {{ backgroundImage: 'url(' + Icon + ')', }}

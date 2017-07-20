@@ -1,20 +1,20 @@
 import React, { Component } from 'react'
 import SearchForm from '../../../components/SearchForm/SearchForm'
+import Resume from './Resume'
 import * as response from '../../../mock/about'
+import CSSModules from 'react-css-modules'
 import styles from '../styles/about.css'
 
 
 const About = () => {
     let result = response.result
     return(
-        <div className={styles.container}>
+        <div styleName="container">
             <SearchForm />
-            <h1>{result.name}</h1>
-            <h1>{result.shcool}</h1>
-            <h1>{result.background}</h1>
+            <Resume />
         </div>
     )
 }
 
 
-module.exports = About
+module.exports = CSSModules(About,styles)

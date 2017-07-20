@@ -5,6 +5,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 var precss       = require('precss');
 var autoprefixer = require('autoprefixer');
 var postassets = require('postcss-assets');
+
 module.exports = {
     devtool : 'eval-source-map',
     entry : [
@@ -56,7 +57,7 @@ module.exports = {
         //}
         {
             test:   /\.css$/,
-            loader: "style-loader!css-loader?modules&localIdentName=[name]---[local]---[hash:base64:5]!postcss-loader"
+            loader: "style-loader?sourceMap!css-loader?modules&importLoaders=1&localIdentName=[name]---[local]---[hash:base64:5]!postcss-loader"
         }
 
         ,{

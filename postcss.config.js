@@ -5,6 +5,6 @@ module.exports = {
         require('postcss-assets')({
             basePath : './src',
             loadPaths: []
-        })
+        }),
     ]
 }
