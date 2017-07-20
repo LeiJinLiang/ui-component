@@ -2,39 +2,55 @@ import React, { Component } from 'react'
 import CSSModules from 'react-css-modules'
 import styles from '../styles/resume.css'
 
+const arr = [
+    { title : 'cloudCross',
+        discirption : "autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use."
+    },
+    { title : 'cloudCross2',
+        discirption : "autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use."
+    }
+]
+
 class Resume extends Component {
     constructor (props) {
         super(props)
         this.state  = {
-            show : true
+            data : arr,
+            show : arr.map((item)=> ({ isShow : true})),
+            flag : arr.map((item)=> ({ isFlag : false}))
         }
     }
 
-    handleToogle = () => {
+    handleToogle = (idx) => {
+        this.state.flag[idx].isFlag = true
+        this.state.show[idx].isShow = !this.state.show[idx].isShow
         this.setState({
-            show : !this.state.show
+            show : this.state.show
         })
     }
 
     render() {
-        const { show } = this.state
+        const { show , flag , data} = this.state
         return (
             <div styleName = "container">
                 <ul>
-                    <li>
-                        <p>July 2014</p>
-                        <div className= {styles.left} styleName = {show?'height2':'height1'}>
-                            <i onClick = {this.handleToogle}></i>
-                            {show?<i></i>:''}
-                        </div>
-                        <div styleName = 'right'>
-                            <h1>cloudcross</h1>
-                            autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.
-                            autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.
-                            autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.
-                        </div>
-                        <p>March 2016</p>
-                    </li>
+                    {data.map((item,index)=>{
+                        const  _show = show[index].isShow?'height2':'height1'
+                        return (
+                            <li key ={index}>
+                                <p>July 2014</p>
+                                <div className= {styles.left} styleName = {!flag[index].isFlag?'':_show}>
+                                    <i onClick = { idx => this.handleToogle(index)}></i>
+                                    {show[index].isShow?<i></i>:''}
+                                </div>
+                                <div className= {styles.right} styleName = {!flag[index].isFlag?'':_show}>
+                                    <h1>{item.title}</h1>
+                                    <strong>{item.discirption}</strong>
+                                </div>
+                                <p>March 2016</p>
+                            </li>
+                        )
+                    })}
                 </ul>
             </div>
         )
