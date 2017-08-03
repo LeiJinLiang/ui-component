@@ -15,7 +15,7 @@ button, input, select, textarea { font-size:100%; }
 table { border-collapse:collapse; border-spacing:0; }
 body{
     font-size: 12px;
-    font-family: Helvetica;
+    font-family: "PingFang SC";
     word-wrap:break-word;
     word-break:break-all;
     padding: 0px 0px 20px 0px;
