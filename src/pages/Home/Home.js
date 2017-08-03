@@ -1,7 +1,7 @@
 import React , { Component } from 'react'
 import Nav from './Nav'
 import Progress from './Progress'
-
+import GoTop from '../../components/GoTop/GoTop'
 require('../../style/common.css')
 
 const nav = [
@@ -23,6 +23,7 @@ class Home extends Component {
                     {this.props.children}
                     CONTACT :  <a href="mailto:reg_taozi@163.com">reg_taozi@163.com</a>
                 </div>
+                <GoTop />
             </section>
         )
     }
