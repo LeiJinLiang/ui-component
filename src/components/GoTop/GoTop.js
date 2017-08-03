@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import CSSModules from 'react-css-modules'
 import styles from './gotop.css'
 
+
+
 class GoTop extends Component {
     constructor(props) {
         super(props)
@@ -30,20 +32,14 @@ class GoTop extends Component {
         return clientHeight;
     }
 
-    scrollTo(element, to, duration) {
-        if (duration <= 0) return;
-        var difference = to - element.scrollTop;
-        var perTick = difference / duration * 10;
-        setTimeout(function() {
-            element.scrollTop = element.scrollTop + perTick;
-            if (element.scrollTop === to) return;
-            scrollTo(element, to, duration - 10);
-        }, 10);
-    }
-
     handleClick = () => {
-        this.scrollTo(document.body,0,1000)
-        console.log('....scroll.....')
+
+        requestAnimationFrame(function aa () {
+            var scTop = document.body.scrollTop;
+            if (!scTop) return;
+            document.body.scrollTop -= 80;
+            requestAnimationFrame(aa)
+        })
     }
 
     componentDidMount () {
