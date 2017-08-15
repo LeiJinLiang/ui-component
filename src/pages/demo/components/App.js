@@ -1,6 +1,7 @@
 import React , { Component } from 'react'
 import Hello from './Hello'
 import Change from './Change'
+import Modal from '../../../components/Modal/Modal'
 
 class App extends Component {
    constructor(props) {
@@ -10,6 +11,7 @@ class App extends Component {
        const { actions, text } = this.props
        return(
            <div>
+               <Modal/>
                <Hello actions = { actions } text = {text} />
                <Change actions = { actions }/>
            </div>
