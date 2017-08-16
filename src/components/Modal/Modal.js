@@ -10,12 +10,15 @@ class Modal extends Component {
          }
     }
 
-    handleClick = () => {
+    handleClick = (e) => {
+        e.stopPropagation()
+        e.preventDefault()
         this.setState({ show : 0})
-        // console.log('this.props',this.props.actions)
     }
 
-    handleData = () => {
+    handleData = (e) => {
+        e.stopPropagation()
+        e.preventDefault()
         this.props.actions.fetchData()
     }
 
