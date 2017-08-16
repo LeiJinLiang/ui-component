@@ -8,11 +8,11 @@ class App extends Component {
        super(props)
    }
    render() {
-       const { actions, text } = this.props
+       const { actions, text , mock} = this.props
        return(
            <div>
                <MyComponent />
-               <Modal/>
+               <Modal actions = {actions} info = {mock}/>
                <Hello actions = { actions } text = {text} />
                <Change actions = { actions }/>
            </div>

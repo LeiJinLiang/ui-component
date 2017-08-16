@@ -12,18 +12,24 @@ class Modal extends Component {
 
     handleClick = () => {
         this.setState({ show : 0})
+        // console.log('this.props',this.props.actions)
+    }
+
+    handleData = () => {
+        this.props.actions.fetchData()
     }
 
     render(){
         let { show } = this.state
+        let { info } = this.props
         return(
             <div>
                     {show ?
-                    <div styleName = 'container'>
+                    <div styleName = 'container' onClick = {this.handleData}>
                         <div styleName = 'content'>
                             <label onClick = {this.handleClick} >X</label>
                             <h4>Modal title</h4>
-                            <p>conent conent content content</p>
+                            <p>{info?info.msg:''}</p>
                         </div>
                     </div> :''}
             </div>
