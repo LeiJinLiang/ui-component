@@ -4,13 +4,15 @@
     padding: 20px 0 20px 0;
     position: fixed;
     top:0;
+    z-index: 99;
+    ul{
+        width: 80%;
+        display: flex;
+        margin: 0 auto;
+        text-align: center;
+    }
 }
-.contanier>ul{
-    width: 80%;
-    display: flex;
-    margin: 0 auto;
-    text-align: center;
-}
+
 .item{
     width: 33.33333%;
 }
