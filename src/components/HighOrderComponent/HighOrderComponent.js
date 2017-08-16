@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Enhance } from "./Enhance"
 
+@Enhance
 class MyComponent extends Component{
     render() {
         if (!this.props.data) return <div>Waiting...</div>;
@@ -8,4 +9,4 @@ class MyComponent extends Component{
     }
 }
 
-export default Enhance(MyComponent)
+export default MyComponent
