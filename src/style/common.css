@@ -55,3 +55,18 @@ body, a, ul, li, img, a:after, a:before, ul:after, ul:before, li:after, li:befor
     -moz-user-select: -moz-none;
     -webkit-overflow-scrolling: touch;
 }
+
+@media (width >= 100px) and (width <= 1400px) {
+    body{
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
+div, a {
+    //color: hsl(90deg 90% 70%);
+    //background-color: hsl(300grad 25% 15% / 70%);
+}
+body {
+    overflow-wrap: break-word;
+}
