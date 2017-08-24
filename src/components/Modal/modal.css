@@ -16,6 +16,9 @@
       background-color: #fff;
       animation: bounceIn 0.5s ease 2;
       padding: 20px;
+      p{
+        text-align: center;
+      }
       label{
         position: absolute;
         display: block;
@@ -23,6 +26,11 @@
         top:10px;
         z-index: 2;
         cursor: pointer;
+      }
+      .btn{
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
       }
   }
 }

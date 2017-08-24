@@ -1,13 +1,17 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from '../reducers';
+import { createLogger } from 'redux-logger';
 
-
-
+const middleware = [thunk]
 //applyMiddleware来自redux可以包装 store 的 dispatch
 //thunk作用是使被 dispatch 的 function 会接收 dispatch 作为参数，并且可以异步调用它
+if(!process.env.NODE_ENV !== 'production') {
+    middleware.push(createLogger())
+}
+
 const createStoreWithMiddleware = applyMiddleware(
-    thunk
+    ...middleware
 )(createStore);
 
 //store.dispatch 参数只能是对象,不能是函数

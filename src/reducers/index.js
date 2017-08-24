@@ -3,7 +3,7 @@ import { Demo } from '../pages/demo/reducers'
 import { recieveImages } from '../pages/Board/reducers'
 const rootReducer = combineReducers({
     Demo,
-    recieveImages
+    recieveImages,
 })
 
 export default rootReducer

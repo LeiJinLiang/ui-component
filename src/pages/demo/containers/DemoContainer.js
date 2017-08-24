@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import App from '../components/App'
-import {changeText, buttonClick , fetchData } from '../actions'
+import {changeText, buttonClick , fetchData , fetchPost , fetchDelete } from '../actions'
 
 const mapStateToProps = (state) => {
     console.log('-----',state)
@@ -12,7 +12,7 @@ const mapStateToProps = (state) => {
 // store.dispatch 是view 发出 action 的唯一方法
 
 const mapDispatchToProps = dispatch => (
-{ actions : bindActionCreators({ changeText : changeText, buttonClick : buttonClick, fetchData : fetchData}, dispatch)}
+{ actions : bindActionCreators({ changeText : changeText, buttonClick : buttonClick, fetchData : fetchData , fetchPost : fetchPost , fetchDelete : fetchDelete}, dispatch)}
 )
 
 module.exports = connect(

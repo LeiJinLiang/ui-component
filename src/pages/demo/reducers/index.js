@@ -4,6 +4,7 @@ const initialState = {
 }
 
 export const Demo = (state=initialState, action) => {
+    console.log('action',action)
     switch (action.type) {
         case 'CHANGE_TEXT':
             return {
@@ -18,6 +19,12 @@ export const Demo = (state=initialState, action) => {
                 text : state.text,
                 mock : action.data || state.mock
             }
+        case  'MOCK_DATA':{
+            return {
+                text : state.text,
+                data : action.data || {}
+            }
+        }
         default :
             return {
                 text: 'Hello'
