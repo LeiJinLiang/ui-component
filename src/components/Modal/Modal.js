@@ -22,7 +22,7 @@ class Modal extends Component {
     }
 
     handleData = () => {
-        this.props.actions.fetchData(`http://10.199.73.113:8080/tasks`)
+        // this.props.actions.fetchData(`http://10.199.73.113:8080/tasks`)
     }
 
     handleAdd = (e) => {

@@ -43,6 +43,27 @@ class Resume extends Component {
         })
     }
 
+    componentWillReceiceProps(props) {
+
+    }
+
+    componentWillMount() {
+
+    }
+
+    componentDidMount () {
+
+    }
+
+    shouldComponentUpdate() {
+
+    }
+
+    componentWillUnmount() {
+
+    }
+    
+
     render() {
         const { show , flag , data} = this.state
         return (
@@ -72,3 +93,4 @@ class Resume extends Component {
 }
 
 export default CSSModules(Resume,styles)
+
