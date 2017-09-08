@@ -45,7 +45,7 @@ class GoTop extends Component {
     componentDidMount () {
         let _this = this
         window.addEventListener('scroll',()=>{
-           _this.state.isShow = (_this.getScrollTop()+400 > _this.getClientHeight())
+           _this.state.isShow = (_this.getScrollTop() > _this.getClientHeight())
            this.setState({ isShow : _this.state.isShow })
         },false)
     }
