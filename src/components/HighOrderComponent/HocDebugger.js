@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { serialize , chunk } from '../../utils/utils'
+import { serialize , chunk , randomLetter, repeatedEle, arrowOrder } from '../../utils/utils'
 const replacer = (key, value) => {
     if(typeof value === 'function') {
       return `function ${value.name}() {...}`
@@ -43,22 +43,24 @@ class HocDebugger extends Component {
         this.state = {
             name : 'taozi',
             email : 'reg_taozi@163.com',
-            number : ''
+            number : '',
+            letter : ''
         }
     }
 
     componentDidMount () {
+        this.state.letter = randomLetter(5)
         chunk(data, (item)=>{
            this.setState({ number: item})
         })
     }
 
     render(){
-        const {number} = this.state
+        const {number, letter} = this.state
         return(
             <div>
                 <h2>
-                    Wrapped Component {number}
+                    Wrapped Component {number} ---- {letter}
                 </h2>
                 <p>This is a wrapped component</p>
             </div>
@@ -69,5 +71,9 @@ class HocDebugger extends Component {
 const bankAccount = '6228480402564890018'
 let _bank = serialize(bankAccount)
 console.log('_bank',_bank())
+let letter = ['1','1','a',1, 1, 2]
+repeatedEle(letter)
 
+let test = [3,0,1,-1,2,10]
+console.log(arrowOrder(test))
 export default  HocDebugger

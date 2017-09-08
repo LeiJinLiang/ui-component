@@ -38,3 +38,49 @@ export const chunk = (array, process, context) => {
 }
 
 
+/*
+* return random string
+* eg str = 'ABCDE'
+* */
+
+export const randomLetter = (digit = 1) => {
+    const temp = [];
+    let str = '';
+    for(let i = 0; i< digit; i++){
+        temp.push(Math.floor(Math.random()*6 + 10).toString(16).toLocaleUpperCase())
+    }
+    str = temp.join('')
+    return str
+}
+
+/**
+ * input array
+ * filter repeated ele
+ * return array
+ */
+
+export const repeatedEle = (array) => {
+    const temp = [];
+    array.map((item,index)=> {
+       if(!temp.includes(item)){
+           temp.push(item)
+       }
+    })
+    console.log('temp',temp)
+    return temp
+}
+
+
+/*
+* Array order
+* */
+export const arrowOrder = (array) => {
+    let  _array = []
+    if(Object.prototype.toString.call(array) === '[object Array]'){
+        _array = array.sort((a,b)=> {
+            return a - b
+        })
+    }
+    return _array
+}
+
