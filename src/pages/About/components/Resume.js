@@ -4,7 +4,7 @@ import styles from '../styles/resume.css'
 
 const arr = [
     { title : '教育背景',
-      discirption : "西安石油大学",
+        discirption : "autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.autoprefixer adds vendor prefixes, using data from Can I Use.",
       st:' Sep. 2010',
       ed:' Jul. 2014'
     },
